@@ -1,12 +1,15 @@
 # forge-cli
 
-> **3 outils Git du quotidien en une CLI** — `pip install` et c'est prêt.
+## Français — présentation
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)](https://python.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Tests](https://img.shields.io/badge/tests-2%20passed-brightgreen)](#)
+**forge-cli** réunit trois outils Git en ligne de commande : générer un `.gitignore`, résumer l’activité d’un dépôt et renommer des fichiers en lot. Il s’adresse aux développeurs qui veulent accomplir ces tâches courantes sans assembler plusieurs scripts.
 
-### En 1 ligne
+### À quoi ça sert, et pourquoi ?
+
+Une CLI unique rassemble ces opérations et permet de les relancer de la même façon dans différents dépôts ou dossiers. Le renommage propose un mode `--dry-run` pour examiner les changements avant de les appliquer.
+
+### Exemples
+
 ```bash
 pip install forge-cli
 forge ignore python,node,vscode -o .gitignore
@@ -14,23 +17,26 @@ forge stats ./mon-repo
 forge rename ./photos --strip-accents --prefix 2026_ --dry-run
 ```
 
----
+## English — overview
 
-## Présentation
+**forge-cli** combines three everyday command-line tools: generate a `.gitignore`, summarize Git activity and batch-rename files. It helps developers run these common tasks from one CLI instead of maintaining separate scripts.
 
-**forge-cli** regroupe 3 commandes que tout dev tape à la main :
+### What is it for, and why use it?
 
-| Commande | À quoi ça sert ? | Exemple concret |
-|---|---|---|
-| `forge ignore` | Génère un `.gitignore` propre depuis [gitignore.io](https://www.toptal.com/developers/gitignore) | Nouveau projet Python+Node → `forge ignore python,node,macos` évite de committer `__pycache__`/`node_modules` |
-| `forge stats` | Audit Git éclair (commits, fichiers, top auteurs) | Lead qui vérifie avant une soutenance : `forge stats D:/Code/mon-projet` |
-| `forge rename` | Renommage masse (regex, préfixe, accents) | 500 photos `Café à Paris.jpg` → `2026_Cafe-a-Paris.jpg` en 1s |
+A single CLI makes the operations easy to repeat across repositories and folders. The rename command supports `--dry-run` so you can review proposed changes before applying them.
 
-**Pour qui ?** Étudiants, devs, ops — 0 config, 0 compte, 1 binaire Python.
+### Examples
 
----
+```bash
+pip install forge-cli
+forge ignore python,node,vscode -o .gitignore
+forge stats ./my-repo
+forge rename ./photos --strip-accents --prefix 2026_ --dry-run
+```
 
-## Installation
+## Installation et utilisation (français)
+
+
 
 ```bash
 git clone https://github.com/JirA44/forge-cli
